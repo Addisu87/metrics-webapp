@@ -1,56 +1,59 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Project Name
+# metrics-webapp
 
 > Description the project.
 
+<!-- ![](https://i.imgur.com/2LoftlO.png) -->
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML, CSS
+- Git, GitHub, Webpack
+- React, Redux
+
+### Prerequisites
+
+-- Any text editor such as vscode.
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### To launch the project locally:
+
+#### Step 1:
+
+- Clone this repo locally using git in the command line and the following command
+
+```bash
+> git clone git@github.com:Addisu87/metrics-webapp.git
+```
+
+- Alternatively, you can just download the complete zip file and extract the folder in your directory
+
+#### Step 2:
+
+- In the terminal, you can run:
+
+```bash
+> cd metrics-webapp
+> npm install
+> code .
+> npm start
+```
+
+- The page should open in localhost:3000
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
+## Author
 
-## Getting Started
+👤 **Addisu Haile**
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Addisu87](https://github.com/Addisu87)
+- Twitter: [@AddisuTedla](https://twitter.com/AddisuTedla)
+- LinkedIn: [Addisu Tedla](www.linkedin.com/in/addisu-tedla/)
 
 ## 🤝 Contributing
 
