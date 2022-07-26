@@ -3,8 +3,8 @@ import continentsReducer from './continents';
 import countriesReducer from './countries';
 
 const rootReducer = combineReducers({
-  continents: continentsReducer,
-  countries: countriesReducer
+  Continents: continentsReducer,
+  Countries: countriesReducer
 });
 
 const store = configureStore({

@@ -1,17 +1,21 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
 import Navigation from './components/Navigation';
-import Continents from './components/Continents';
+import ContinentsPage from './pages/ContinentsPage';
+import CountriesPage from './pages/CountriesPage';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return (
     <div className="App">
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/continents" element={<Continents />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/continents" element={<ContinentsPage />} />
+          <Route path="/countries" element={<CountriesPage />} />
+        </Routes>
+      </main>
     </div>
   );
 };

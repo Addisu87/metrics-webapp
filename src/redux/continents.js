@@ -1,4 +1,4 @@
-const URL = 'https://covid.mathdro.id/api/continents/';
+const URL = 'https://covid.mathdro.id/api/og/';
 
 // Actions
 const FETCH_CONTINENTS_STARTED = 'covid-tracker/FETCH_CONTINENTS_STARTED';

@@ -1,13 +1,40 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*:root {
+  --blue: #4369b2;
+  --white: white;
+  --darker: #000;
+  --dark-brown: #292929;
+  --light-pink: #e94987;
+  --dark-pink: #cf4277;
+  --montserrat: 'Montserrat', OpenSans-serif;
+  --lato: 'Lato', sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+button,
+input {
+  appearance: none;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
