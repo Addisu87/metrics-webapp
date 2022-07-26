@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import airPollutionReducer from './airPollution';
+import continentsReducer from './continents';
+import countriesReducer from './countries';
 
 const rootReducer = combineReducers({
-  airPollution: airPollutionReducer
+  continents: continentsReducer,
+  countries: countriesReducer
 });
 
 const store = configureStore({

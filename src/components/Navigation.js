@@ -1,13 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import openWeather from '../images/open-weather.png';
 
 function Navigation() {
   return (
     <nav className="navbar">
       <div className="navTitle">
-        <img id="logo" src={openWeather} alt="Logo" />
-        <h1>Air Pollution App</h1>
+        <h1>Covid-19 Tracker</h1>
       </div>
       <ul className="navLinks">
         <li className="navLink">

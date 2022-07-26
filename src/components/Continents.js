@@ -1,7 +1,24 @@
 import React from 'react';
 
-function Continents() {
-  return <div>Continents</div>;
-}
+const Continents = () => {
+  return (
+    <div className="continents">
+      <div className="headingContainer">
+        {continents.map((continents)=>{
+          
+        })}
+
+
+      </div>
+
+      <input
+        type="text"
+        name="searchBar"
+        id="searchBar"
+        placeholder="Search..."
+      />
+    </div>
+  );
+};
 
 export default Continents;
