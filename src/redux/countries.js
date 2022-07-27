@@ -1,4 +1,4 @@
-const URL = 'https://covid.mathdro.id/api/countries/';
+const CountryURL = 'https://disease.sh/v3/covid-19/countries';
 
 // initial states
 
@@ -31,14 +31,20 @@ export const countriesFailed = (error) => ({
 // Thunk
 export const getCountries = (location) => (dispatch) => {
   dispatch(countriesStarted());
-  fetch(URL)
+  fetch(CountryURL)
     .then((response) => response.json())
     .then((data) => {
       const newCountries = data
         .filter((cont) => cont.continent === location)
         .map((cont) => ({
-          name: cont.country,
-          deaths: cont.deaths
+          id: country,
+          flag: cont.countryInfo.flag,
+          cases: cont.cases,
+          deaths: cont.deaths,
+          recovered: cont.recovered,
+          active: cont.active,
+          critical: cont.critical,
+          population: cont.population
         }));
       dispatch(countriesSucceeded(newCountries));
     })

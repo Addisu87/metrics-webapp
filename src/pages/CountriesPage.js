@@ -1,11 +1,10 @@
 import React from 'react';
+import Countries from '../components/Countries';
 
 function CountriesPage() {
   return (
     <div>
-      <div>confirmed</div>
-      <div>recovered</div>
-      <div>deaths</div>
+      <Countries />
     </div>
   );
 }

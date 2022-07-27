@@ -1,4 +1,4 @@
-const URL = 'https://covid.mathdro.id/api/og/';
+const ContinentURL = 'https://disease.sh/v3/covid-19/continents';
 
 // Actions
 const FETCH_CONTINENTS_STARTED = 'covid-tracker/FETCH_CONTINENTS_STARTED';
@@ -26,15 +26,30 @@ export const continentFailed = (error) => ({
 export const getContinents = () => async (dispatch) => {
   dispatch(continentStarted());
   try {
-    const data = await fetch(URL);
+    const continents = [];
+    const data = await fetch(ContinentURL);
     const response = await data.json();
     dispatch(
       continentSucceeded(
-        response.map((cont) => ({
-          name: cont.continent,
-          deaths: cont.deaths,
-          countries: cont.countries
-        }))
+        response.map((cont) =>
+          continents.push({
+            id: cont.continent,
+            continent: cont.continent,
+            cases: continent.cases,
+            todayCases: cont.todayCases,
+            deaths: cont.deaths,
+            todayDeaths: cont.todayDeaths,
+            recovered: cont.recovered,
+            todayRecovered: cont.todayRecovered,
+            active: cont.active,
+            critical: cont.critical,
+            tests: cont.tests,
+            population: cont.population,
+            InfoLat: cont.continentInfo.lat,
+            InfoLong: cont.continentInfo.long,
+            countries: cont.countries
+          })
+        )
       )
     );
   } catch (error) {

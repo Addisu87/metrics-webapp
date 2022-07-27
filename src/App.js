@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import ContinentsPage from './pages/ContinentsPage';
 import CountriesPage from './pages/CountriesPage';
@@ -13,9 +14,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/continents" element={<ContinentsPage />} />
-          <Route path="/countries" element={<CountriesPage />} />
+          <Route path="/countries/:continent" element={<CountriesPage />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 };
