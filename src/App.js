@@ -11,7 +11,7 @@ const App = () => (
     <main>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/countries/:continent" element={<Countries />} />
+        <Route path="/country/:continent" element={<Countries />} />
       </Routes>
     </main>
     <Footer />
