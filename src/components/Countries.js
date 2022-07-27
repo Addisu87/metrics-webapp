@@ -8,10 +8,12 @@ import { getContinents } from '../redux/continents';
 const Countries = () => {
   const dispatch = useDispatch();
   const { continent } = useParams();
-  const continents = useSelector((state) => state.Continents) || [];
+  const { continents } = useSelector((state) => state.Continents) || [];
   const countryInfo = useSelector((state) => state.Countries);
 
-  const filteredContinent = continents.filter((item) => item.id === continent);
+  const filteredContinent = continents.filter(
+    (item) => item.id === continent
+  )[0];
   const { countries } = filteredContinent || [];
   const [country, setCountry] = useState();
 
@@ -26,8 +28,8 @@ const Countries = () => {
         <option value="" key="country">
           Country...
         </option>
-        {countries
-          && countries.map((land) => (
+        {countries &&
+          countries.map((land) => (
             <option value={`${land}`} key={land}>
               {land}
             </option>
