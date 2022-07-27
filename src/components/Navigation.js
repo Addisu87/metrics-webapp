@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 function Navigation() {
   return (
-    <Nav className={styled.navbar}>
+    <Nav>
       <NavBar>
         <NavLinks to="/">
           <BackArrow />

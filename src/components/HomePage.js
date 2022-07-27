@@ -9,6 +9,7 @@ import { getContinents } from '../redux/continents';
 
 const HomePage = () => {
   const { status, continents } = useSelector((state) => state.Continents);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,9 +32,7 @@ const HomePage = () => {
       <WorldMap>
         <Title>
           Covid-19
-          {' '}
           <br />
-          {' '}
           Tracker
         </Title>
         <img src={WorldImg} alt="World map" width={400} />
