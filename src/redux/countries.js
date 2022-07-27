@@ -18,9 +18,9 @@ export const countriesStarted = () => ({
   type: FETCH_COUNTRIES_STARTED
 });
 
-export const countriesSucceeded = (countries) => ({
+export const countriesSucceeded = (country) => ({
   type: FETCH_COUNTRIES_SUCCESS,
-  payload: countries
+  payload: country
 });
 
 export const countriesFailed = (error) => ({
@@ -29,13 +29,13 @@ export const countriesFailed = (error) => ({
 });
 
 // Thunk
-export const getCountries = (location) => (dispatch) => {
+export const getCountries = (country) => async (dispatch) => {
   dispatch(countriesStarted());
-  fetch(CountryURL)
+  await fetch(CountryURL)
     .then((response) => response.json())
     .then((data) => {
       const newCountries = data
-        .filter((cont) => cont.continent === location)
+        .filter((cont) => cont.country === country)
         .map((cont) => ({
           id: country,
           flag: cont.countryInfo.flag,
@@ -48,8 +48,8 @@ export const getCountries = (location) => (dispatch) => {
         }));
       dispatch(countriesSucceeded(newCountries));
     })
-    .catch((err) => {
-      dispatch(countriesFailed(JSON.stringify(err.message)));
+    .catch((error) => {
+      dispatch(countriesFailed(JSON.stringify(error)));
     });
 };
 

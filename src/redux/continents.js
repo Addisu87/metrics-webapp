@@ -35,7 +35,7 @@ export const getContinents = () => async (dispatch) => {
           continents.push({
             id: cont.continent,
             continent: cont.continent,
-            cases: continent.cases,
+            cases: cont.cases,
             todayCases: cont.todayCases,
             deaths: cont.deaths,
             todayDeaths: cont.todayDeaths,

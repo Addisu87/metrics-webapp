@@ -16,8 +16,8 @@ const Countries = () => {
   const [country, setCountry] = useState();
 
   useEffect(() => {
-    dispatch(getContinents);
-  }, []);
+    dispatch(getContinents(country));
+  }, [country]);
 
   return (
     <CountryWrapper>
@@ -37,7 +37,7 @@ const Countries = () => {
         Show Information
       </Button>
       {country && country === countryInfo.id ? (
-        <CtryInfo>
+        <Info>
           <li>
             <h3>{countryInfo.id}</h3>
           </li>
@@ -74,7 +74,7 @@ const Countries = () => {
             <strong>Population:</strong>
             {countryInfo.population}
           </li>
-        </CtryInfo>
+        </Info>
       ) : (
         'Choose a country'
       )}
@@ -86,4 +86,4 @@ export default Countries;
 
 const CountryWrapper = styled.div``;
 const Button = styled.button``;
-const CtryInfo = styled.ul``;
+const Info = styled.ul``;

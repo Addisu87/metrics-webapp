@@ -1,10 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer';
+import Countries from './components/Countries';
+import HomePage from './components/HomePage';
 import Navigation from './components/Navigation';
-import ContinentsPage from './pages/ContinentsPage';
-import CountriesPage from './pages/CountriesPage';
-import HomePage from './pages/HomePage';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -13,8 +12,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/continents" element={<ContinentsPage />} />
-          <Route path="/countries/:continent" element={<CountriesPage />} />
+          <Route path="/country/:continent" element={<Countries />} />
         </Routes>
       </main>
       <Footer />

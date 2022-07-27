@@ -7,13 +7,13 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Continents = () => {
+const HomePage = () => {
   const { status, continents } = useSelector((state) => state.Continents);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getContinents());
-  }, [dispatch]);
+  }, []);
 
   const [plate, setPlate] = useState(false);
 
@@ -49,8 +49,8 @@ const Continents = () => {
             <Circles color="#00BFFF" height={80} width={80} />
           </div>
         )}
-        {/* {status === 'failed' && <div>{error}</div>} */}
-        {plate && plate.length !== 0 ? (
+        {/* {status === 'failed' && <div>Error: {error}</div>} */}
+        {status === 'succeeded' && plate && plate.length !== 0 ? (
           <Card key={plate[0].continent}>
             <li style={{ position: 'relative', left: '4rem' }}>
               <Link to={`/country/${plate[0].id}`}>
@@ -70,7 +70,6 @@ const Continents = () => {
             </li>
           </Card>
         ) : (
-          status === 'succeeded' &&
           continents.map((continent) => (
             <Card key={continent.id}>
               <li style={{ position: 'relative', left: '4rem' }}>
@@ -97,7 +96,7 @@ const Continents = () => {
   );
 };
 
-export default Continents;
+export default HomePage;
 
 const WorldMap = styled.div`
   width: 100vw;
