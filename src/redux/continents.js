@@ -8,17 +8,17 @@ const FETCH_CONTINENTS_FAILED = 'covid-tracker/FETCH_CONTINENTS_FAILED';
 // Action creators
 
 export const continentStarted = () => ({
-  type: FETCH_CONTINENTS_STARTED
+  type: FETCH_CONTINENTS_STARTED,
 });
 
 export const continentSucceeded = (continents) => ({
   type: FETCH_CONTINENTS_SUCCESS,
-  payload: continents
+  payload: continents,
 });
 
 export const continentFailed = (error) => ({
   type: FETCH_CONTINENTS_FAILED,
-  error
+  error,
 });
 
 // Thunk
@@ -45,9 +45,9 @@ export const getContinents = () => async (dispatch) => {
           population: cont.population,
           InfoLat: cont.continentInfo.lat,
           InfoLong: cont.continentInfo.long,
-          countries: cont.countries
-        }))
-      )
+          countries: cont.countries,
+        })),
+      ),
     );
   } catch (error) {
     dispatch(continentFailed(error.toString()));
@@ -58,7 +58,7 @@ export const getContinents = () => async (dispatch) => {
 const initialState = {
   continents: [],
   status: 'idle',
-  error: null
+  error: null,
 };
 
 // continents reducer
@@ -71,7 +71,7 @@ const continentsReducer = (state = initialState, action = {}) => {
         ...state,
         continents: action.payload,
         status: 'succeeded',
-        error: null
+        error: null,
       };
     case FETCH_CONTINENTS_FAILED:
       return { ...state, status: 'failed', error: action.error };

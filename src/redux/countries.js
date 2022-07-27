@@ -8,18 +8,16 @@ export const getCountriesFromAPI = async (country) => {
   const object = await fetch(CountryURL)
     .then((response) => response.json())
     .then((data) => data.filter((ctry) => ctry.country === country))
-    .then((info) =>
-      info.map((cont) => ({
-        id: country,
-        flag: cont.countryInfo.flag,
-        cases: cont.cases,
-        deaths: cont.deaths,
-        recovered: cont.recovered,
-        active: cont.active,
-        critical: cont.critical,
-        population: cont.population
-      }))
-    );
+    .then((info) => info.map((cont) => ({
+      id: country,
+      flag: cont.countryInfo.flag,
+      cases: cont.cases,
+      deaths: cont.deaths,
+      recovered: cont.recovered,
+      active: cont.active,
+      critical: cont.critical,
+      population: cont.population,
+    })));
   return object[0];
 };
 

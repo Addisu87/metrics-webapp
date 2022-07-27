@@ -4,11 +4,11 @@ import countriesReducer from './countries';
 
 const rootReducer = combineReducers({
   Continents: continentsReducer,
-  Countries: countriesReducer
+  Countries: countriesReducer,
 });
 
 const store = configureStore({
-  reducer: rootReducer
+  reducer: rootReducer,
 });
 
 export default store;

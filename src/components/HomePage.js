@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Circles } from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContinents } from '../redux/continents';
-import WorldImg from '../images/mapa-mundi.png';
 import { FaArrowCircleRight } from 'react-icons/fa';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import WorldImg from '../images/mapa-mundi.png';
+import { getContinents } from '../redux/continents';
 
 const HomePage = () => {
   const { status, continents } = useSelector((state) => state.Continents);
@@ -19,11 +19,10 @@ const HomePage = () => {
 
   const handleOnChange = (e) => {
     const textInput = e.target.value.toLowerCase() || '';
-    const str =
-      textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length)) ||
-      '';
+    const str = textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length))
+      || '';
     setPlate(
-      continents.filter((continent) => continent.countries.includes(str))
+      continents.filter((continent) => continent.countries.includes(str)),
     );
   };
 
@@ -31,9 +30,13 @@ const HomePage = () => {
     <div className="continents">
       <WorldMap>
         <Title>
-          Covid-19 <br /> Tracker
+          Covid-19
+          {' '}
+          <br />
+          {' '}
+          Tracker
         </Title>
-        <img src={WorldImg} alt="World image" width={400} />
+        <img src={WorldImg} alt="World map" width={400} />
       </WorldMap>
 
       <SearchBar
@@ -68,6 +71,10 @@ const HomePage = () => {
               <strong>Deaths:</strong>
               {plate[0].deaths}
             </li>
+            <li>
+              <strong>Recovered:</strong>
+              {plate[0].recovered}
+            </li>
           </Card>
         ) : (
           continents.map((continent) => (
@@ -87,6 +94,10 @@ const HomePage = () => {
               <li>
                 <strong>Deaths:</strong>
                 {continent.deaths}
+              </li>
+              <li>
+                <strong>Recovered:</strong>
+                {continent.recovered}
               </li>
             </Card>
           ))

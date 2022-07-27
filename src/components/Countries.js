@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import { getCountries } from '../redux/countries';
-import styled from 'styled-components';
 import { getContinents } from '../redux/continents';
 
 const Countries = () => {
@@ -11,30 +11,28 @@ const Countries = () => {
   const continents = useSelector((state) => state.Continents) || [];
   const countryInfo = useSelector((state) => state.Countries);
 
-  const filteredContinent = continents.filter(
-    (item) => item.id === continent
-  );
+  const filteredContinent = continents.filter((item) => item.id === continent);
   const { countries } = filteredContinent || [];
   const [country, setCountry] = useState();
 
   useEffect(() => {
-    dispatch(getContinents(country));
-  }, [country]);
+    dispatch(getContinents());
+  }, []);
 
   return (
     <CountryWrapper>
       <h1>{continent}</h1>
-      <select name="country" onChange={(e) => setCountry(e.target.value)}>
+      <Select name="country" onChange={(e) => setCountry(e.target.value)}>
         <option value="" key="country">
           Country...
         </option>
-        {countries &&
-          countries.map((land) => (
+        {countries
+          && countries.map((land) => (
             <option value={`${land}`} key={land}>
               {land}
             </option>
           ))}
-      </select>
+      </Select>
       <Button type="button" onClick={() => dispatch(getCountries(country))}>
         Show Information
       </Button>
@@ -86,6 +84,50 @@ const Countries = () => {
 
 export default Countries;
 
-const CountryWrapper = styled.div``;
-const Button = styled.button``;
-const Info = styled.ul``;
+const CountryWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  margin: 2rem;
+  width: 90%;
+`;
+
+const Select = styled.select`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  padding: 0.5rem;
+  margin: 2rem;
+  width: 60%;
+`;
+
+const Button = styled.button`
+  padding: 0.5rem;
+  color: rgb(236, 76, 138);
+  border: rgb(236, 76, 138) 1px solid;
+  background: #000;
+  border-radius: 5px;
+  margin: 2rem 0;
+  align-self: center;
+  width: 60%;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgb(236, 76, 138);
+  }
+`;
+
+const Info = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-radius: 5px;
+  justify-content: space-between;
+  width: 75%;
+  list-style: none;
+  background: rgb(236, 76, 138);
+  color: white;
+  padding: 2rem;
+`;
