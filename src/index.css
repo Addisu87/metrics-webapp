@@ -15,7 +15,6 @@
   --dark-brown: #292929;
   --light-pink: #e94987;
   --dark-pink: #cf4277;
-  --montserrat: 'Montserrat', OpenSans-serif;
   --lato: 'Lato', sans-serif;
 }
 
@@ -37,4 +36,5 @@ input {
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--lato);
 }

@@ -51,7 +51,6 @@ const HomePage = () => {
             <Circles color="#00BFFF" height={80} width={80} />
           </div>
         )}
-        {/* {status === 'failed' && <div>Error: {error}</div>} */}
         {status === 'succeeded' && plate && plate.length !== 0 ? (
           <Card key={plate[0].continent}>
             <li style={{ position: 'relative', left: '4rem' }}>
@@ -69,10 +68,6 @@ const HomePage = () => {
             <li>
               <strong>Deaths:</strong>
               {plate[0].deaths}
-            </li>
-            <li>
-              <strong>Recovered:</strong>
-              {plate[0].recovered}
             </li>
           </Card>
         ) : (
@@ -93,10 +88,6 @@ const HomePage = () => {
               <li>
                 <strong>Deaths:</strong>
                 {continent.deaths}
-              </li>
-              <li>
-                <strong>Recovered:</strong>
-                {continent.recovered}
               </li>
             </Card>
           ))
