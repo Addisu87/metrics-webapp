@@ -28,13 +28,13 @@ describe('Jest Snapshot testing suite', () => {
   });
 
   it('Should return initial state', () => {
-    const continentsInitialData = {
+    const initialData = {
       countries: [],
       status: 'Loading',
       error: null
     };
 
-    expect(continentsReducer(continentsInitialData, { type: '' })).toEqual({
+    expect(continentsReducer(initialData, { type: '' })).toEqual({
       countries: [],
       status: 'Loading',
       error: null

@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import Countries from '../pages/Countries';
 import store from '../redux/configureStore';
-import continentsReducer from '../redux/continents';
 import countriesReducer, { getCountries } from '../redux/countries';
 
 describe('Jest Snapshot testing suite', () => {
@@ -13,7 +12,7 @@ describe('Jest Snapshot testing suite', () => {
         <Provider store={store}>
           <Countries />
         </Provider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
