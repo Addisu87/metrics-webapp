@@ -1,8 +1,7 @@
-import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
-import App from '../App';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
+import Navigation from '../components/Navigation';
 import store from '../redux/configureStore';
 
 describe('Jest Snapshot testing suite', () => {
@@ -10,7 +9,7 @@ describe('Jest Snapshot testing suite', () => {
     const { container } = render(
       <MemoryRouter>
         <Provider store={store}>
-          <App />
+          <Navigation />
         </Provider>
       </MemoryRouter>,
     );
