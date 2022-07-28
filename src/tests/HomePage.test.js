@@ -12,7 +12,7 @@ describe('Jest Snapshot testing suite', () => {
         <Provider store={store}>
           <HomePage />
         </Provider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -31,13 +31,13 @@ describe('Jest Snapshot testing suite', () => {
     const initialData = {
       countries: [],
       status: 'Loading',
-      error: null
+      error: null,
     };
 
     expect(continentsReducer(initialData, { type: '' })).toEqual({
       countries: [],
       status: 'Loading',
-      error: null
+      error: null,
     });
   });
 });

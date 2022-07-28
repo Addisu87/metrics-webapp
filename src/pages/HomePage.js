@@ -20,11 +20,10 @@ const HomePage = () => {
 
   const handleOnChange = (e) => {
     const textInput = e.target.value.toLowerCase() || '';
-    const str =
-      textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length)) ||
-      '';
+    const str = textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length))
+      || '';
     setPlate(
-      continents.filter((continent) => continent.countries.includes(str))
+      continents.filter((continent) => continent.countries.includes(str)),
     );
   };
 

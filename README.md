@@ -1,8 +1,6 @@
 # metrics-webapp
 
-> This react capstone project is about building a mobile web application to check a list of metrics (numerical values). It is created using React and Redux. I have used an external API to show a covid-19 statistical data of specific continent and country. This webapp has a home page to show a filtered items of continent and a countries page to show a details data of specific country.
-
-<!-- ![](https://i.imgur.com/2LoftlO.png) -->
+> This metrics web-app is build as a mobile web application to check a list of metrics (numerical values). It is created using React and Redux. I have used an external API to show a covid-19 statistical data of specific continent and country. This webapp has a home page to show a filtered items of continent and a countries page to show a details data of a particular country.
 
 ## Built With
 
@@ -45,7 +43,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://react-metrics-webapp.netlify.app/)
 
 ## Author
 
@@ -59,7 +57,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Addisu87/metrics-webapp/issues).
 
 ## Show your support
 
