@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FaArrowCircleRight } from 'react-icons/fa';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import WorldImg from '../images/mapa-mundi.png';
+import CoronaImg from '../images/corona.png';
 import { getContinents } from '../redux/continents';
 
 const HomePage = () => {
@@ -20,23 +20,24 @@ const HomePage = () => {
 
   const handleOnChange = (e) => {
     const textInput = e.target.value.toLowerCase() || '';
-    const str = textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length))
-      || '';
+    const str =
+      textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length)) ||
+      '';
     setPlate(
-      continents.filter((continent) => continent.countries.includes(str)),
+      continents.filter((continent) => continent.countries.includes(str))
     );
   };
 
   return (
     <div className="continents">
-      <WorldMap>
+      <CoronaPic>
         <Title>
           Covid-19
           <br />
           Tracker
         </Title>
-        <img src={WorldImg} alt="World map" width={400} />
-      </WorldMap>
+        <img src={CoronaImg} alt="CoronaImg" width={350} height={220} />
+      </CoronaPic>
 
       <SearchBar
         type="text"
@@ -47,9 +48,9 @@ const HomePage = () => {
       />
       <GridWrapper>
         {status === 'loading' && (
-          <div>
+          <Spinner>
             <Circles color="#00BFFF" height={80} width={80} />
-          </div>
+          </Spinner>
         )}
         {status === 'succeeded' && plate && plate.length !== 0 ? (
           <Card key={plate[0].continent}>
@@ -99,10 +100,10 @@ const HomePage = () => {
 
 export default HomePage;
 
-const WorldMap = styled.div`
+const CoronaPic = styled.div`
   width: 100vw;
-  height: 25vh;
-  background: linear-gradient(to right, #000, rgb(236, 76, 138));
+  height: 30vh;
+  background: linear-gradient(to right, #000, var(--blue));
 `;
 
 const Title = styled.h1`
@@ -110,19 +111,20 @@ const Title = styled.h1`
   font-weight: bold;
   text-shadow: #000 2px 2px 3px;
   position: absolute;
-  top: 3rem;
+  top: 2.5rem;
   right: 2rem;
 `;
 
 const SearchBar = styled.input`
   width: 100vw;
   padding: 0.5rem;
-  background: rgb(236, 76, 138, 0.8);
+  background: rgb(67, 105, 178, 0.8);
   color: white;
   font-style: italic;
   font-size: large;
   &::placeholder {
     color: white;
+    align-self: center;
   }
 `;
 
@@ -135,10 +137,17 @@ const GridWrapper = styled.div`
   width: 100vw;
 `;
 
+const Spinner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+`;
+
 const Card = styled.ul`
   list-style: none;
   width: 100%;
-  background: rgb(236, 76, 138);
+  background: var(--blue);
   box-shadow: 1px 1px 20px black;
   padding: 2rem 1rem;
   margin: 0;

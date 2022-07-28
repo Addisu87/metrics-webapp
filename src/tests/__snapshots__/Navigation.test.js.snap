@@ -2,7 +2,7 @@
 
 exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
 <nav
-  class="sc-bczRLJ fTnDfE"
+  class="sc-bczRLJ dwLGhv"
 >
   <div
     class="sc-gsnTZi jyTtBf"
@@ -27,9 +27,9 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
         />
       </svg>
     </a>
-    <h3>
+    <h2>
       2022
-    </h3>
+    </h2>
   </div>
 </nav>
 `;

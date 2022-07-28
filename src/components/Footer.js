@@ -4,11 +4,14 @@ import styled from 'styled-components';
 function Footer() {
   return (
     <FooterWrapper>
-      <h3>
+      <h4>
         Created by
         {' '}
-        <Atag href="https://github.com/Addisu87">Addisu Haile</Atag>
-      </h3>
+        <Link href="https://github.com/Addisu87">
+          <span>Addisu Haile</span>
+          {' '}
+        </Link>
+      </h4>
     </FooterWrapper>
   );
 }
@@ -16,18 +19,26 @@ function Footer() {
 export default Footer;
 
 const FooterWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--darker);
-  margin: 1rem;
-  h3 {
+  padding: 0.5rem;
+  color: var(--blue);
+  border: var(--blue) 1px solid;
+  background: var(--dark-brown);
+  border-radius: 5px;
+  margin: 2rem auto;
+  align-item: center;
+  width: 70%;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px var(--blue);
+  }
+  h4 {
     color: white;
   }
 `;
 
-const Atag = styled.a`
+const Link = styled.a`
   text-decoration: none;
   font-style: italic;
-  color: rgb(236, 76, 138);
+  color: var(--blue);
 `;

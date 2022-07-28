@@ -5,23 +5,24 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
   class="continents"
 >
   <div
-    class="sc-jSMfEi kWBQuV"
+    class="sc-jSMfEi eyROl"
   >
     <h1
-      class="sc-gKXOVf fRmkhv"
+      class="sc-gKXOVf fuzscZ"
     >
       Covid-19
       <br />
       Tracker
     </h1>
     <img
-      alt="World map"
-      src="mapa-mundi.png"
-      width="400"
+      alt="CoronaImg"
+      height="220"
+      src="corona.png"
+      width="350"
     />
   </div>
   <input
-    class="sc-iBkjds eMAGrL"
+    class="sc-iBkjds bTJJNM"
     id="searchBar"
     name="search"
     placeholder="Search..."
@@ -30,7 +31,9 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
   <div
     class="sc-ftvSup ivSneu"
   >
-    <div>
+    <div
+      class="sc-papXJ iriIyN"
+    >
       <div
         data-testid="circles-loading"
         style="display: flex;"

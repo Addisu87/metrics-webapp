@@ -12,7 +12,7 @@ const Countries = () => {
   const countryInfo = useSelector((state) => state.Countries);
 
   const filteredContinent = continents.filter(
-    (item) => item.id === continent,
+    (item) => item.id === continent
   )[0];
   const { countries } = filteredContinent || [];
   const [country, setCountry] = useState();
@@ -28,18 +28,18 @@ const Countries = () => {
         <option value="" key="country">
           Country...
         </option>
-        {countries
-          && countries.map((land) => (
+        {countries &&
+          countries.map((land) => (
             <option value={`${land}`} key={land}>
               {land}
             </option>
           ))}
       </Select>
       <Button type="button" onClick={() => dispatch(getCountries(country))}>
-        Show Information
+        <h4>Show Information</h4>
       </Button>
       {country && country === countryInfo.id ? (
-        <Info>
+        <Details>
           <li>
             <h3>{countryInfo.id}</h3>
           </li>
@@ -76,7 +76,7 @@ const Countries = () => {
             <strong>Population:</strong>
             {countryInfo.population}
           </li>
-        </Info>
+        </Details>
       ) : (
         'Choose a country'
       )}
@@ -107,9 +107,9 @@ const Select = styled.select`
 
 const Button = styled.button`
   padding: 0.5rem;
-  color: rgb(236, 76, 138);
-  border: rgb(236, 76, 138) 1px solid;
-  background: #000;
+  color: var(--white);
+  border: var(--blue) 1px solid;
+  background: var(--dark-brown);
   border-radius: 5px;
   margin: 2rem 0;
   align-self: center;
@@ -117,11 +117,11 @@ const Button = styled.button`
   &:hover {
     transition: all 0.2s ease-in-out;
     font-weight: bold;
-    box-shadow: 2px 2px 10px rgb(236, 76, 138);
+    box-shadow: 2px 2px 10px var(--blue);
   }
 `;
 
-const Info = styled.ul`
+const Details = styled.ul`
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -129,7 +129,7 @@ const Info = styled.ul`
   justify-content: space-between;
   width: 75%;
   list-style: none;
-  background: rgb(236, 76, 138);
+  background: var(--blue);
   color: white;
   padding: 2rem;
 `;

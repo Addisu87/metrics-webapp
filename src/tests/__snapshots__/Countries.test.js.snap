@@ -16,10 +16,12 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
     </option>
   </select>
   <button
-    class="sc-dkzDqf filQzq"
+    class="sc-dkzDqf bjXjiT"
     type="button"
   >
-    Show Information
+    <h4>
+      Show Information
+    </h4>
   </button>
   Choose a country
 </div>

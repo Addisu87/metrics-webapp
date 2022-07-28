@@ -5,18 +5,18 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
   class="App"
 >
   <nav
-    class="sc-breuTD iYNXTz"
+    class="sc-bczRLJ dwLGhv"
   >
     <div
-      class="sc-ksZaOG llOiEp"
+      class="sc-gsnTZi jyTtBf"
     >
       <a
         aria-current="page"
-        class="sc-hAZoDl mYLhB active"
+        class="sc-dkzDqf gedDWv active"
         href="/"
       >
         <svg
-          class="sc-fnykZs itmbJJ"
+          class="sc-hKMtZM la-difT"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -30,9 +30,9 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
           />
         </svg>
       </a>
-      <h3>
+      <h2>
         2022
-      </h3>
+      </h2>
     </div>
   </nav>
   <main>
@@ -40,32 +40,35 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
       class="continents"
     >
       <div
-        class="sc-papXJ ehcwGY"
+        class="sc-kDDrLX fgdrSi"
       >
         <h1
-          class="sc-jqUVSM fetuLi"
+          class="sc-iqcoie erEMXu"
         >
           Covid-19
           <br />
           Tracker
         </h1>
         <img
-          alt="World map"
-          src="mapa-mundi.png"
-          width="400"
+          alt="CoronaImg"
+          height="220"
+          src="corona.png"
+          width="350"
         />
       </div>
       <input
-        class="sc-kDDrLX kykhPf"
+        class="sc-crXcEl kjgsSS"
         id="searchBar"
         name="search"
         placeholder="Search..."
         type="text"
       />
       <div
-        class="sc-iqcoie gXQugM"
+        class="sc-evZas hrAzxH"
       >
-        <div>
+        <div
+          class="sc-breuTD dIYMGe"
+        >
           <div
             data-testid="circles-loading"
             style="display: flex;"
@@ -110,18 +113,21 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
     </div>
   </main>
   <div
-    class="sc-fEOsli ldIOtn"
+    class="sc-eCYdqJ ctgXDk"
   >
-    <h3>
+    <h4>
       Created by
        
       <a
-        class="sc-bjUoiL hbTYMj"
+        class="sc-jSMfEi etCyxC"
         href="https://github.com/Addisu87"
       >
-        Addisu Haile
+        <span>
+          Addisu Haile
+        </span>
+         
       </a>
-    </h3>
+    </h4>
   </div>
 </div>
 `;

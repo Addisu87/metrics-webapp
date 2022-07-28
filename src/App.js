@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Countries from './components/Countries';
-import HomePage from './components/HomePage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import Countries from './pages/Countries';
 
 const App = () => (
   <div className="App">

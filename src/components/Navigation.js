@@ -10,7 +10,7 @@ function Navigation() {
         <NavLinks to="/">
           <BackArrow />
         </NavLinks>
-        <h3>2022</h3>
+        <h2>2022</h2>
       </NavBar>
     </Nav>
   );
@@ -19,7 +19,7 @@ function Navigation() {
 export default Navigation;
 
 const Nav = styled.nav`
-  background-color: var(--dark-pink);
+  background-color: var(--blue);
   color: var(--white);
   height: 60px;
   display: flex;
