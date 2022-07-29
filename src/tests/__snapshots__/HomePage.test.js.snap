@@ -4,21 +4,21 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
 <div
   class="continents"
 >
-  <div
-    class="sc-jSMfEi eyROl"
+  <h3
+    class="sc-gKXOVf bzpjob"
   >
-    <h1
-      class="sc-gKXOVf fuzscZ"
-    >
-      Covid-19
-      <br />
-      Tracker
-    </h1>
+    Covid-19
+    <br />
+    Tracker
+  </h3>
+  <div
+    class="sc-jSMfEi kZQvRU"
+  >
     <img
       alt="CoronaImg"
-      height="220"
       src="corona.png"
-      width="350"
+      style="align-items: flex-end;"
+      width="100"
     />
   </div>
   <input
@@ -42,9 +42,9 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
           aria-label="circles-loading"
           data-testid="circles-svg"
           fill="#00BFFF"
-          height="80"
+          height="50"
           viewBox="0 0 135 135"
-          width="80"
+          width="50"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

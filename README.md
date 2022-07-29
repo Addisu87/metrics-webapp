@@ -43,7 +43,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://react-metrics-webapp.netlify.app/)
+[Live Demo Link](https://covid--metrics.herokuapp.com/)
 
 ## Author
 
