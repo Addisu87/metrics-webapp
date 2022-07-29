@@ -34,14 +34,16 @@ const HomePage = () => {
         return Africa;
       case 'Europe':
         return Europe;
-      case 'Australia':
+      case 'Australia-Oceania':
         return Australia;
-      case 'SouthAmerica':
+      case 'South America':
         return SouthAmerica;
       default:
         break;
     }
+    return mapImage;
   };
+
   useEffect(() => {
     setPlate(continents);
   }, [continents]);
@@ -59,13 +61,18 @@ const HomePage = () => {
 
   return (
     <div className="continents">
+      <Title>
+        Covid-19
+        <br />
+        Tracker
+      </Title>
       <CoronaPic>
-        <Title>
-          Covid-19
-          <br />
-          Tracker
-        </Title>
-        <img src={CoronaImg} alt="CoronaImg" width={200} height={200} />
+        <img
+          src={CoronaImg}
+          alt="CoronaImg"
+          width={100}
+          style={{ alignItems: 'flex-end' }}
+        />
       </CoronaPic>
 
       <SearchBar
@@ -78,7 +85,7 @@ const HomePage = () => {
       <GridWrapper>
         {status === 'loading' && (
           <Spinner>
-            <Circles color="#00BFFF" height={80} width={80} />
+            <Circles color="#00BFFF" height={50} width={50} />
           </Spinner>
         )}
 
@@ -125,16 +132,16 @@ export default HomePage;
 
 const CoronaPic = styled.div`
   width: 100vw;
-  height: 30vh;
+  height: 20vh;
   background: linear-gradient(to right, #000, var(--blue));
 `;
 
-const Title = styled.h1`
+const Title = styled.h3`
   color: white;
   font-weight: bold;
   text-shadow: #000 2px 2px 3px;
   position: absolute;
-  top: 5rem;
+  top: 8rem;
   left: 1.5rem;
 `;
 
@@ -172,7 +179,6 @@ const Card = styled.ul`
   list-style: none;
   width: 100%;
   background: var(--blue);
-  // opacity: 0.25;
   box-shadow: 1px 1px 20px black;
   padding: 2rem 1rem;
   margin: 0;
