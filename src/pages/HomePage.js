@@ -6,6 +6,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import CoronaImg from '../images/corona.png';
 import { getContinents } from '../redux/continents';
+import Asia from '../images/Asia.png';
+import Africa from '../images/Africa.png';
+import Europe from '../images/Europe.png';
+import NorthAmerica from '../images/North-America.png';
+import Australia from '../images/Australia.png';
+import SouthAmerica from '../images/South-America.png';
 
 const HomePage = () => {
   const { status, continents } = useSelector((state) => state.Continents);
@@ -16,14 +22,38 @@ const HomePage = () => {
     dispatch(getContinents());
   }, []);
 
-  const [plate, setPlate] = useState(false);
+  const [plate, setPlate] = useState([]);
+
+  const mapImage = (continent) => {
+    switch (continent) {
+      case 'Asia':
+        return Asia;
+      case 'North America':
+        return NorthAmerica;
+      case 'Africa':
+        return Africa;
+      case 'Europe':
+        return Europe;
+      case 'Australia':
+        return Australia;
+      case 'SouthAmerica':
+        return SouthAmerica;
+      default:
+        break;
+    }
+  };
+  useEffect(() => {
+    setPlate(continents);
+  }, [continents]);
 
   const handleOnChange = (e) => {
     const textInput = e.target.value.toLowerCase() || '';
-    const str = textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length))
-      || '';
+    const str =
+      textInput[0].toUpperCase().concat(textInput.slice(1, textInput.length)) ||
+      '';
+
     setPlate(
-      continents.filter((continent) => continent.countries.includes(str)),
+      continents.filter((continent) => continent.continent.includes(str))
     );
   };
 
@@ -35,7 +65,7 @@ const HomePage = () => {
           <br />
           Tracker
         </Title>
-        <img src={CoronaImg} alt="CoronaImg" width={350} height={220} />
+        <img src={CoronaImg} alt="CoronaImg" width={200} height={200} />
       </CoronaPic>
 
       <SearchBar
@@ -51,47 +81,41 @@ const HomePage = () => {
             <Circles color="#00BFFF" height={80} width={80} />
           </Spinner>
         )}
-        {status === 'succeeded' && plate && plate.length !== 0 ? (
-          <Card key={plate[0].continent}>
+
+        {plate?.map((continent) => (
+          <Card key={continent.id}>
+            <img
+              src={mapImage(continent.continent)}
+              alt={continent.continent}
+              style={{
+                width: '30%',
+                height: '95%',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                zIndex: '10',
+                backgroundColor: 'transparent',
+                background: 'no-repeat'
+              }}
+            />
             <li style={{ position: 'relative', left: '4rem' }}>
-              <Link to={`/country/${plate[0].id}`}>
+              <Link to={`/country/${continent.id}`}>
                 <Arrow />
               </Link>
             </li>
             <li>
-              <h2>{plate[0].continent}</h2>
+              <h2>{continent.continent}</h2>
             </li>
             <li>
               <strong>Cases:</strong>
-              {plate[0].cases}
+              {continent.cases}
             </li>
             <li>
               <strong>Deaths:</strong>
-              {plate[0].deaths}
+              {continent.deaths}
             </li>
           </Card>
-        ) : (
-          continents.map((continent) => (
-            <Card key={continent.id}>
-              <li style={{ position: 'relative', left: '4rem' }}>
-                <Link to={`/country/${continent.id}`}>
-                  <Arrow />
-                </Link>
-              </li>
-              <li>
-                <h2>{continent.continent}</h2>
-              </li>
-              <li>
-                <strong>Cases:</strong>
-                {continent.cases}
-              </li>
-              <li>
-                <strong>Deaths:</strong>
-                {continent.deaths}
-              </li>
-            </Card>
-          ))
-        )}
+        ))}
       </GridWrapper>
     </div>
   );
@@ -110,8 +134,8 @@ const Title = styled.h1`
   font-weight: bold;
   text-shadow: #000 2px 2px 3px;
   position: absolute;
-  top: 2.5rem;
-  right: 2rem;
+  top: 5rem;
+  left: 1.5rem;
 `;
 
 const SearchBar = styled.input`
@@ -144,9 +168,11 @@ const Spinner = styled.div`
 `;
 
 const Card = styled.ul`
+  position: relative;
   list-style: none;
   width: 100%;
   background: var(--blue);
+  // opacity: 0.25;
   box-shadow: 1px 1px 20px black;
   padding: 2rem 1rem;
   margin: 0;
