@@ -1,62 +1,63 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# metrics-webapp
 
-# Project Name
-
-> Description the project.
-
+> This metrics web-app is build as a mobile web application to check a list of metrics (numerical values). It is created using React and Redux. I have used an external API to show a covid-19 statistical data of specific continent and country. This webapp has a home page to show a filtered items of continent and a countries page to show a details data of a particular country.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+- HTML, CSS
+- Git, GitHub, Webpack
+- React, Redux
 
 ### Prerequisites
 
-### Setup
+-- Any text editor such as vscode.
 
-### Install
+## Getting Started
 
-### Usage
+To get a local copy up and running follow these simple example steps.
 
-### Run tests
+### To launch the project locally:
 
-### Deployment
+#### Step 1:
 
+- Clone this repo locally using git in the command line and the following command
 
+```bash
+> git clone git@github.com:Addisu87/metrics-webapp.git
+```
 
-## Authors
+- Alternatively, you can just download the complete zip file and extract the folder in your directory
 
-👤 **Author1**
+#### Step 2:
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- In the terminal, you can run:
 
-👤 **Author2**
+```bash
+> cd metrics-webapp
+> npm install
+> code .
+> npm start
+```
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- The page should open in localhost:3000
+
+## Live Demo (if available)
+
+[Live Demo Link](https://react-metrics-webapp.netlify.app/)
+
+## Author
+
+👤 **Addisu Haile**
+
+- GitHub: [@Addisu87](https://github.com/Addisu87)
+- Twitter: [@AddisuTedla](https://twitter.com/AddisuTedla)
+- LinkedIn: [Addisu Tedla](www.linkedin.com/in/addisu-tedla/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Addisu87/metrics-webapp/issues).
 
 ## Show your support
 
@@ -64,9 +65,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Original design idea by Nelson Sakwa on Behance.
 
 ## 📝 License
 

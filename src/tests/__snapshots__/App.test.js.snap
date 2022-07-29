@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
+<div
+  class="App"
+>
+  <nav
+    class="sc-bczRLJ dwLGhv"
+  >
+    <div
+      class="sc-gsnTZi jyTtBf"
+    >
+      <a
+        aria-current="page"
+        class="sc-dkzDqf gedDWv active"
+        href="/"
+      >
+        <svg
+          class="sc-hKMtZM la-difT"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
+          />
+        </svg>
+      </a>
+      <h2>
+        2022
+      </h2>
+    </div>
+  </nav>
+  <main>
+    <div
+      class="continents"
+    >
+      <div
+        class="sc-kDDrLX fgdrSi"
+      >
+        <h1
+          class="sc-iqcoie erEMXu"
+        >
+          Covid-19
+          <br />
+          Tracker
+        </h1>
+        <img
+          alt="CoronaImg"
+          height="220"
+          src="corona.png"
+          width="350"
+        />
+      </div>
+      <input
+        class="sc-crXcEl kjgsSS"
+        id="searchBar"
+        name="search"
+        placeholder="Search..."
+        type="text"
+      />
+      <div
+        class="sc-evZas hrAzxH"
+      >
+        <div
+          class="sc-breuTD dIYMGe"
+        >
+          <div
+            data-testid="circles-loading"
+            style="display: flex;"
+          >
+            <svg
+              aria-label="circles-loading"
+              data-testid="circles-svg"
+              fill="#00BFFF"
+              height="80"
+              viewBox="0 0 135 135"
+              width="80"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="2.5s"
+                  from="0 67 67"
+                  repeatCount="indefinite"
+                  to="-360 67 67"
+                  type="rotate"
+                />
+              </path>
+              <path
+                d="M28.19 40.31c6.627 0 12-5.374 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.626 5.372 12 12 12zm30.72-19.825c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97-4.686-4.687-12.284-4.687-16.97 0-4.687 4.686-4.687 12.284 0 16.97zm35.74 7.705c0 6.627 5.37 12 12 12 6.626 0 12-5.373 12-12 0-6.628-5.374-12-12-12-6.63 0-12 5.372-12 12zm19.822 30.72c-4.686 4.686-4.686 12.284 0 16.97 4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0zm-7.704 35.74c-6.627 0-12 5.37-12 12 0 6.626 5.373 12 12 12s12-5.374 12-12c0-6.63-5.373-12-12-12zm-30.72 19.822c-4.686-4.686-12.284-4.686-16.97 0-4.686 4.687-4.686 12.285 0 16.97 4.686 4.687 12.284 4.687 16.97 0 4.687-4.685 4.687-12.283 0-16.97zm-35.74-7.704c0-6.627-5.372-12-12-12-6.626 0-12 5.373-12 12s5.374 12 12 12c6.628 0 12-5.373 12-12zm-19.823-30.72c4.687-4.686 4.687-12.284 0-16.97-4.686-4.686-12.284-4.686-16.97 0-4.687 4.686-4.687 12.284 0 16.97 4.686 4.687 12.284 4.687 16.97 0z"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="8s"
+                  from="0 67 67"
+                  repeatCount="indefinite"
+                  to="360 67 67"
+                  type="rotate"
+                />
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div
+    class="sc-eCYdqJ ctgXDk"
+  >
+    <h4>
+      Created by
+       
+      <a
+        class="sc-jSMfEi etCyxC"
+        href="https://github.com/Addisu87"
+      >
+        <span>
+          Addisu Haile
+        </span>
+         
+      </a>
+    </h4>
+  </div>
+</div>
+`;

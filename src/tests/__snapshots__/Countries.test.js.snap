@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
+<div
+  class="sc-bczRLJ jVxtWG"
+>
+  <h1 />
+  <select
+    class="sc-gsnTZi hwveBo"
+    name="country"
+  >
+    <option
+      value=""
+    >
+      Country...
+    </option>
+  </select>
+  <button
+    class="sc-dkzDqf bjXjiT"
+    type="button"
+  >
+    <h4>
+      Show Information
+    </h4>
+  </button>
+  Choose a country
+</div>
+`;
