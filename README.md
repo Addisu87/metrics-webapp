@@ -4,8 +4,8 @@
 
 ## Images
 
-![](https://imgur.com/v2kcRAh)
-![](https://imgur.com/Q55ds5R)
+![](https://i.imgur.com/v2kcRAh.png)
+![](https://i.imgur.com/Q55ds5R.png)
 
 ## Built With
 
