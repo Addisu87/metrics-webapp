@@ -1,6 +1,6 @@
 # metrics-webapp
 
-> This metrics web-app is build as a mobile web application to check a list of metrics (numerical values). It is created using React and Redux. I have used an external API to show a covid-19 statistical data of specific continent and country. This webapp has a home page to show a filtered items of continent and a countries page to show a details data of a particular country.
+> This metrics web app is built as a mobile web application to check a list of metrics (numerical values). It is created using React and Redux. I have used an external API to show a covid-19 statistical data of specific continents and countries. This web app has a home page to show filtered items of continents and a countries page to show details data of a particular country.
 
 ## Images
 
