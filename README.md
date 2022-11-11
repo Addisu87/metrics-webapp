@@ -48,7 +48,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://covid--metrics.herokuapp.com/)
+[Live Demo Link](https://metrics-webapp-addisu87.vercel.app/)
 
 ## Author
 
